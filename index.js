@@ -14,7 +14,7 @@ const persona = {
     }
 }
 
-const mensaje = persona.name + " que vive en " + persona.address.city + " tiene "+  persona.friends.length + " amigos llamados " +  persona.friends;
+function printInfo({name}){
+    return '<h1>Hola ' + name + '</h1>'
 
-let title = document.getElementById('title');
-title.innerHTML= mensaje;
+}document.body.innerHTML = printInfo(persona)
