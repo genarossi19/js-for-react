@@ -1,20 +1,8 @@
-const persona = {
-    name: "Genaro",
-    lastname: "Rossi",
-    age: 20,
-    address: {
-        country: "Argemtina",
-        city: "Trenque Lauquen",
-        street: "Uruguay",
-        number: 683
-    },
-    friends: ['Facundo', 'Camila','Abi'],
-    saludar(){
-        return "Hola gente"
-    }
-}
+//Inline Arrow Functions y return objetcs
 
-function printInfo({name}){
-    return '<h1>Hola ' + name + '</h1>'
+const showObject = ()=>({name: 'Genaro'})
 
-}document.body.innerHTML = printInfo(persona)
+const button = document.createElement("button")
+button.innerText="Clickeame"
+button.addEventListener('click', ()=> alert(showObject() + 'clicked')) //no muestra "Genaro clicked" es solo para mostrar el uso
+document.body.append(button)
