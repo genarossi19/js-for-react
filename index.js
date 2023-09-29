@@ -1,6 +1,31 @@
-import * as math from './math.js'
+const ol = document.createElement('ol')
 
-console.log(math.add(4,2))
-console.log(math.sub(4,2))
-console.log(math.mul(4,2))
-console.log(math.div(4,2))
+
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response)=>{
+       return response.json()
+    }).then((data)=>{
+        console.log(data)
+        data.forEach((post)=>{
+            const li = document.createElement('li')
+            li.innerText = post.title
+            ol.append(li)
+
+        })
+        document.body.append(ol)
+    
+    })
+
+console.log('asincronia')
+
+//async await
+
+async function loadData(){
+    const respuesta = await fetch('https://jsonplaceholder.typicode.com/posts')
+const data = await respuesta.json()
+}
+
+loadData()
+
+console.log('asincronia2')
