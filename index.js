@@ -1,23 +1,6 @@
-//Spread Operator, para concatenar
-//Arrays
+import * as math from './math.js'
 
-const names = ['ryan','joe','maria']
-const newNames = ['marcos','mario','john']
-console.log([...names, ...newNames])
-
-//Objects
-
-const user={
-    name: 'Genaro',
-    lastname: 'Rossi'
-}
-const address={
-    street: 'main street 123',
-    city: 'Buenos Aires'
-}
-
-const userInfo={
-    ...user,...address
-}
-
-console.log(userInfo)
+console.log(math.add(4,2))
+console.log(math.sub(4,2))
+console.log(math.mul(4,2))
+console.log(math.div(4,2))
